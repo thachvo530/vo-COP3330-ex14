@@ -13,27 +13,26 @@ public class App {
 
         String WI = "WI";
         DecimalFormat df = new DecimalFormat("0.00");
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("What is the order amount? ");
-        Scanner amount = new Scanner(System.in);
-        double amount1 = amount.nextDouble();
+        double amount = scan.nextDouble();
 
         System.out.print("What is the state? ");
-        Scanner state = new Scanner(System.in);
-        String state1 = state.next();
+        String state = scan.next();
 
-        if (state1.equals(WI)) {
+        if (state.equals(WI)) {
 
-            double tax = 0.055 * amount1;
-            double total = amount1 + tax;
+            double tax = 0.055 * amount;
+            double total = amount + tax;
 
-            System.out.print("The subtotal is $" + df.format(amount1) + ".\nThe tax is $" + df.format(tax) + ".\nThe total is $" + df.format(total) + ".");
+            System.out.print("The subtotal is $" + df.format(amount) + ".\nThe tax is $" + df.format(tax) + ".\nThe total is $" + df.format(total) + ".");
 
         }
 
-        if (!state1.equals(WI)) {
+        if (!state.equals(WI)) {
 
-            System.out.print("The total is $" + df.format(amount1) + ".");
+            System.out.print("The total is $" + df.format(amount) + ".");
 
         }
     }

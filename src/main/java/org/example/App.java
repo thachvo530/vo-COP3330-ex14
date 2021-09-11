@@ -18,7 +18,7 @@ public class App {
         Scanner amount = new Scanner(System.in);
         double amount1 = amount.nextDouble();
 
-        System.out.print("What is the State? ");
+        System.out.print("What is the state? ");
         Scanner state = new Scanner(System.in);
         String state1 = state.next();
 
